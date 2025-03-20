@@ -28,7 +28,7 @@ const CourseGrade = ({ intl }) => {
   const applyLockedOverlay = gradesFeatureIsFullyLocked ? "locked-overlay" : "";
 
   return (
-    <section className="text-dark-700 my-4 rounded raised-card">
+    <section className="text-dark-700 mb-4 rounded raised-card">
       {(gradesFeatureIsFullyLocked || gradesFeatureIsPartiallyLocked) && (
         <CourseGradeHeader />
       )}
