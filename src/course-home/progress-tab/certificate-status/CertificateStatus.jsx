@@ -255,11 +255,11 @@ const CertificateStatus = () => {
             <Button
                   variant="outline-brand"
                   style={{
-                        width: '20%',
+                        width: '15%',
                         background: '#fff',
                         color: '#0B7077',
                         border: '#fff',
-                        fontSize: '16px',
+                        fontSize: '14px',
                         }}
                   onClick={() => {
                     logCertificateStatusButtonClicked(certStatus);

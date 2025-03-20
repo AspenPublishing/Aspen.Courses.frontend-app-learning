@@ -14,6 +14,21 @@
     position: relative;
   }
 
+  .pgn__card-header-content {
+    margin-top: 1.5rem;
+  }
+
+  .pgn__card-header-title-md {
+    color: #fff !important;
+    margin-left: 10rem;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .pgn__card-section {
+    margin-left: 10rem;
+  }
+
   // Certificate content styling
   .certificate-content {
     position: relative;
