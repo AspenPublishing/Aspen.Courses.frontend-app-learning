@@ -12,6 +12,8 @@ import { DashboardLink, IdVerificationSupportLink, ProfileLink } from '../../../
 import { requestCert } from '../../data/thunks';
 import messages from './messages';
 import ProgressCertificateStatusSlot from '../../../plugin-slots/ProgressCertificateStatusSlot';
+import './certificate.scss';
+
 
 const CertificateStatus = () => {
   const intl = useIntl();
@@ -240,7 +242,7 @@ const CertificateStatus = () => {
   };
 
   return (
-    <section data-testid="certificate-status-component" className="text-dark-700 mb-4">
+    <section id="certificate-status-component" data-testid="certificate-status-component" className="text-dark-700 mb-4">
       <Card className="bg-light-200 raised-card">
         <ProgressCertificateStatusSlot courseId={courseId}>
           <div id={`${certCase}_certificate_status`}>

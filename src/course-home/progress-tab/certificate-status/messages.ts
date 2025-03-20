@@ -53,12 +53,12 @@ const messages = defineMessages({
   },
   downloadableHeader: {
     id: 'progress.certificateStatus.downloadableHeader',
-    defaultMessage: 'Your certificate is available!',
+    defaultMessage: 'Congratulations on completing the course!',
     description: 'Header text when the certifcate is available',
   },
   viewableButton: {
     id: 'progress.certificateStatus.viewableButton',
-    defaultMessage: 'View my certificate',
+    defaultMessage: 'VIEW CERTIFICATE',
     description: 'Button text which view or links to the certifcate',
   },
   notAvailableHeader: {
