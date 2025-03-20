@@ -1,11 +1,18 @@
 #certificate-status-component {
-  background-image: url('../../../assets/certificate-bg.svg');
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 15px;
   margin-bottom: 2rem !important;
   position: relative;
   overflow: hidden;
+
+  #certificate-status-card {
+    background-image: url('../../../assets/certificate-bg.svg');
+    border-radius: 15px;
+    margin-bottom: 4rem !important;
+    overflow: hidden;
+    position: relative;
+  }
 
   // Certificate content styling
   .certificate-content {

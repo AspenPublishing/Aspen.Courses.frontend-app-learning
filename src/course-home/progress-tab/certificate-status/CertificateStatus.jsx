@@ -243,11 +243,15 @@ const CertificateStatus = () => {
 
   return (
     <section id="certificate-status-component" data-testid="certificate-status-component" className="text-dark-700 mb-4">
-      <Card className="raised-card">
+      <Card className="raised-card" id="certificate-status-card">
         <ProgressCertificateStatusSlot courseId={courseId}>
           <div id={`${certCase}_certificate_status`}>
-            <Card.Header title={header} />
-            <Card.Section className="small text-gray-700">
+            <Card.Header title={header} style={{
+              marginLeft: '220px',
+            }}/>
+            <Card.Section className="small text-gray-700" style={{
+              marginLeft: '220px',
+            }}>
             <Button
                   variant="outline-brand"
                   style={{
