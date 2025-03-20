@@ -40,7 +40,7 @@ const ProgressTab = () => {
         <div className="col-12 col-md-12 p-0">
           {!wideScreen && <CertificateStatus />}
           {wideScreen && <CertificateStatus />}
-          <RelatedLinks />
+          {/* <RelatedLinks /> */}
           <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
             {!disableProgressGraph && <CourseCompletion />}
             <CourseGrade />
