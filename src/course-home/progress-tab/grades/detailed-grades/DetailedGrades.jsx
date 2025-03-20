@@ -67,14 +67,14 @@ const DetailedGrades = ({ intl }) => {
             description="Information text about non-graded practice score label"
           />
         </p>
-        <li>
+        <p>
           <b>{intl.formatMessage(messages.gradedScoreLabel)} </b>
           <FormattedMessage
             id="progress.detailedGrades.problem-label.info.text"
             defaultMessage="Scores from activities that contribute to your final grade."
             description="Information text about graded problem score label"
           />
-        </li>
+        </p>
       </div>
       {gradesFeatureIsPartiallyLocked && (
         <div className="mb-3 small ml-0 d-inline">
