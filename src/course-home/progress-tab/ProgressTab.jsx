@@ -37,7 +37,7 @@ const ProgressTab = () => {
       <ProgressHeader />
       <div className="row w-100 m-0">
         {/* Main body */}
-        <div className="col-12 col-md-8 p-0">
+        <div className="col-12 col-md-12 p-0">
           {!wideScreen && <CertificateStatus />}
           {wideScreen && <CertificateStatus />}
           <RelatedLinks />
