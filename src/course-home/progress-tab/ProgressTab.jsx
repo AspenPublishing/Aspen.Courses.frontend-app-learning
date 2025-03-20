@@ -41,8 +41,10 @@ const ProgressTab = () => {
           {!wideScreen && <CertificateStatus />}
           {wideScreen && <CertificateStatus />}
           <RelatedLinks />
-          {!disableProgressGraph && <CourseCompletion />}
-          <CourseGrade />
+          <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+            {!disableProgressGraph && <CourseCompletion />}
+            <CourseGrade />
+          </div>
           <div className={`grades my-4 p-4 rounded raised-card ${applyLockedOverlay}`} aria-hidden={gradesFeatureIsFullyLocked}>
             <GradeSummary />
             <DetailedGrades />
