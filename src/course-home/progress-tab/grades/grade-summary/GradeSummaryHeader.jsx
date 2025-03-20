@@ -18,7 +18,7 @@ const GradeSummaryHeader = ({ allOfSomeAssignmentTypeIsLocked }) => {
   } = useModel('progress', courseId);
 
   return (
-    <div className="row w-100 m-0 align-items-center">
+    <div className="row w-100 m-0 align-items-center py-4">
       <h3 className="h4 mb-3 mr-1">{intl.formatMessage(messages.gradeSummary)}</h3>
       <OverlayTrigger
         trigger="hover"

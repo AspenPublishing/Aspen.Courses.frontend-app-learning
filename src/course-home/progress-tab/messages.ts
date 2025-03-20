@@ -3,7 +3,7 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   progressHeader: {
     id: 'progress.header',
-    defaultMessage: 'Your progress',
+    defaultMessage: 'Progress',
     description: 'Headline or title for the progress tab',
   },
   progressHeaderForTargetUser: {

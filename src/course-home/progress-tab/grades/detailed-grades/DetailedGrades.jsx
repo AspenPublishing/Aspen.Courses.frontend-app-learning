@@ -56,9 +56,9 @@ const DetailedGrades = ({ intl }) => {
   );
 
   return (
-    <section className="text-dark-700">
+    <section className="text-dark-700" style={{ marginTop: '4rem' }}>
       <h3 className="h2">{intl.formatMessage(messages.detailedGrades)}</h3>
-      <div className="micro mb-3 pl-3 text-gray-700">
+      <div className="micro mb-3 pl-3 text-gray-700 py-4">
         <p>
           <b>{intl.formatMessage(messages.practiceScoreLabel)} </b>
           <FormattedMessage
