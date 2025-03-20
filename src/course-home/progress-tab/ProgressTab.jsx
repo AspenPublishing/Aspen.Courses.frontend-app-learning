@@ -40,17 +40,13 @@ const ProgressTab = () => {
         <div className="col-12 col-md-8 p-0">
           {!disableProgressGraph && <CourseCompletion />}
           {!wideScreen && <CertificateStatus />}
+          {wideScreen && <CertificateStatus />}
+          <RelatedLinks />
           <CourseGrade />
           <div className={`grades my-4 p-4 rounded raised-card ${applyLockedOverlay}`} aria-hidden={gradesFeatureIsFullyLocked}>
             <GradeSummary />
             <DetailedGrades />
           </div>
-        </div>
-
-        {/* Side panel */}
-        <div className="col-12 col-md-4 p-0 px-md-4">
-          {wideScreen && <CertificateStatus />}
-          <RelatedLinks />
         </div>
       </div>
     </>
