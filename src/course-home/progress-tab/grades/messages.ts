@@ -160,7 +160,7 @@ const messages = defineMessages({
   },
   passingGradeLabel: {
     id: 'progress.courseGrade.label.passingGrade',
-    defaultMessage: 'Passing grade',
+    defaultMessage: 'Needed to pass',
     description: 'Label for mark on the (grade bar) chart which indicate the poisition of passing grade on the bar',
   },
   gradedScoreLabel: {

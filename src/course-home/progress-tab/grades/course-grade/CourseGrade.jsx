@@ -116,7 +116,6 @@ const CourseGrade = ({ intl }) => {
         <div className="row w-100 m-0 px-4">
           <CreditInformation />
         </div>
-        <CourseGradeFooter passingGrade={passingGrade} />
       </div>
     </section>
   );
