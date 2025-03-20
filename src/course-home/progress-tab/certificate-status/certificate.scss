@@ -1,11 +1,9 @@
 #certificate-status-component {
   background-image: url('../../../assets/certificate-bg.svg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
   border-radius: 15px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
   position: relative;
   overflow: hidden;
 

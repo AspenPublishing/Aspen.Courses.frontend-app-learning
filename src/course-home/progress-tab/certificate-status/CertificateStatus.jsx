@@ -243,16 +243,12 @@ const CertificateStatus = () => {
 
   return (
     <section id="certificate-status-component" data-testid="certificate-status-component" className="text-dark-700 mb-4">
-      <Card className="bg-light-200 raised-card">
+      <Card className="raised-card">
         <ProgressCertificateStatusSlot courseId={courseId}>
           <div id={`${certCase}_certificate_status`}>
             <Card.Header title={header} />
             <Card.Section className="small text-gray-700">
-              {body}
-            </Card.Section>
-            <Card.Footer>
-              {buttonText && (buttonLocation || buttonAction) && (
-                <Button
+            <Button
                   variant="outline-brand"
                   onClick={() => {
                     logCertificateStatusButtonClicked(certStatus);
@@ -263,8 +259,8 @@ const CertificateStatus = () => {
                 >
                   {buttonText}
                 </Button>
-              )}
-            </Card.Footer>
+            </Card.Section>
+
           </div>
         </ProgressCertificateStatusSlot>
       </Card>
