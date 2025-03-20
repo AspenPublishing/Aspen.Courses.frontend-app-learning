@@ -250,6 +250,13 @@ const CertificateStatus = () => {
             <Card.Section className="small text-gray-700">
             <Button
                   variant="outline-brand"
+                  style={{
+                        width: '20%',
+                        background: '#fff',
+                        color: '#0B7077',
+                        border: '#fff',
+                        fontSize: '16px',
+                        }}
                   onClick={() => {
                     logCertificateStatusButtonClicked(certStatus);
                     if (buttonAction) { buttonAction(); }
