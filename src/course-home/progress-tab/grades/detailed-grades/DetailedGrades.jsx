@@ -57,16 +57,16 @@ const DetailedGrades = ({ intl }) => {
 
   return (
     <section className="text-dark-700">
-      <h3 className="h4">{intl.formatMessage(messages.detailedGrades)}</h3>
-      <ul className="micro mb-3 pl-3 text-gray-700">
-        <li>
+      <h3 className="h2">{intl.formatMessage(messages.detailedGrades)}</h3>
+      <div className="micro mb-3 pl-3 text-gray-700">
+        <p>
           <b>{intl.formatMessage(messages.practiceScoreLabel)} </b>
           <FormattedMessage
             id="progress.detailedGrades.practice-label.info.text"
             defaultMessage="Scores from non-graded activities meant for practice and self-assessment."
             description="Information text about non-graded practice score label"
           />
-        </li>
+        </p>
         <li>
           <b>{intl.formatMessage(messages.gradedScoreLabel)} </b>
           <FormattedMessage
@@ -75,7 +75,7 @@ const DetailedGrades = ({ intl }) => {
             description="Information text about graded problem score label"
           />
         </li>
-      </ul>
+      </div>
       {gradesFeatureIsPartiallyLocked && (
         <div className="mb-3 small ml-0 d-inline">
           <Icon className="mr-1 mt-1 d-inline-flex" style={{ height: '1rem', width: '1rem' }} src={Blocked} data-testid="blocked-icon" />
