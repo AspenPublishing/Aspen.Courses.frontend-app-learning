@@ -121,13 +121,13 @@ const WeeklyLearningGoalCard = ({
           />
         </div>
         <div className="d-flex pt-3">
-          <Form.Switch
+          <Form.Checkbox
             checked={isGetReminderSelected}
             onChange={(event) => handleSubscribeToReminders(event)}
             disabled={!daysPerWeekGoal}
           >
             <small>{intl.formatMessage(messages.setGoalReminder)}</small>
-          </Form.Switch>
+          </Form.Checkbox>
         </div>
       </Card.Section>
       {isGetReminderSelected && (
