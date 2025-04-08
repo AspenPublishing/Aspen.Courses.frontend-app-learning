@@ -108,28 +108,28 @@ const SequenceLink = ({
               />
             )}
           </div>
-          <div className="col-10 p-0 ml-3 text-break">
+          <div className="col-8 p-0 ml-3 text-break">
             <span className="align-middle">{displayTitle}</span>
             <span className="sr-only">
               , {intl.formatMessage(complete ? messages.completedAssignment : messages.incompleteAssignment)}
             </span>
             <EffortEstimate className="ml-3 align-middle" block={sequence} />
+            {hideFromTOC && (
+              <div className="m-0 my-auto mx-4 pl-3">
+                <span className="small d-flex">
+                  <Icon className="mr-2" src={Block} data-testid="hide-from-toc-sequence-link-icon" />
+                  <span data-testid="hide-from-toc-sequence-link-text">
+                    {intl.formatMessage(messages.hiddenSequenceLink)}
+                  </span>
+                </span>
+              </div>
+            )}
+            <div className="m-0 my-auto pl-3">
+              <small className="text-body pl-2">
+                {due ? dueDateMessage : noDueDateMessage}
+              </small>
+            </div>
           </div>
-        </div>
-        {hideFromTOC && (
-          <div className="row w-100 my-2 mx-4 pl-3">
-            <span className="small d-flex">
-              <Icon className="mr-2" src={Block} data-testid="hide-from-toc-sequence-link-icon" />
-              <span data-testid="hide-from-toc-sequence-link-text">
-                {intl.formatMessage(messages.hiddenSequenceLink)}
-              </span>
-            </span>
-          </div>
-        )}
-        <div className="row w-100 m-0 ml-3 pl-3">
-          <small className="text-body pl-2">
-            {due ? dueDateMessage : noDueDateMessage}
-          </small>
         </div>
       </div>
     </li>
