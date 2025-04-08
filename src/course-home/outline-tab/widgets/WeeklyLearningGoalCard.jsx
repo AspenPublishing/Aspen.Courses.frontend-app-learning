@@ -95,7 +95,7 @@ const WeeklyLearningGoalCard = ({
     >
       <Card.Header
         size="sm"
-        title={(<div id="set-weekly-goal-header">{intl.formatMessage(messages.setWeeklyGoal)}</div>)}
+        title={(<div id="set-weekly-goal-header" className="h3">{intl.formatMessage(messages.setWeeklyGoal)}</div>)}
         subtitle={intl.formatMessage(messages.setWeeklyGoalDetail)}
       />
       <Card.Section className="text-gray-700 small">
