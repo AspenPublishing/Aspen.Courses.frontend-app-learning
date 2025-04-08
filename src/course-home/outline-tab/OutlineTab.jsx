@@ -8,7 +8,6 @@ import { Button } from '@openedx/paragon';
 import { PluginSlot } from '@openedx/frontend-plugin-framework';
 import { AlertList } from '../../generic/user-messages';
 
-import CourseDates from './widgets/CourseDates';
 import CourseHandouts from './widgets/CourseHandouts';
 import StartOrResumeCourseCard from './widgets/StartOrResumeCourseCard';
 import WeeklyLearningGoalCard from './widgets/WeeklyLearningGoalCard';
