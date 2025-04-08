@@ -88,7 +88,7 @@ const Section = ({
   return (
     <li>
       <Collapsible
-        className="mb-2"
+        className=""
         styling="card-lg"
         title={sectionTitle}
         open={open}
