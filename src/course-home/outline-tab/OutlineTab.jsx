@@ -197,7 +197,7 @@ const OutlineTab = ({ intl }) => {
           <WelcomeMessage courseId={courseId} />
           {rootCourseId && (
             <>
-              <div className="row w-100 m-0 mb-3 justify-content-end">
+              <div className="row w-100 m-0 mb-3 justify-content-between">
                 <div className="h3 ">
                   Course Outline
                 </div>
