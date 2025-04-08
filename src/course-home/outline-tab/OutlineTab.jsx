@@ -175,7 +175,6 @@ const OutlineTab = ({ intl }) => {
                 org={org}
               />
             </PluginSlot>
-            <CourseDates />
             <CourseHandouts />
           </div>
         )}
