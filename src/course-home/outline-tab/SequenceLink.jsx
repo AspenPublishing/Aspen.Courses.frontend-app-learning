@@ -114,7 +114,8 @@ const SequenceLink = ({
               , {intl.formatMessage(complete ? messages.completedAssignment : messages.incompleteAssignment)}
             </span>
             <EffortEstimate className="ml-3 align-middle" block={sequence} />
-            {hideFromTOC && (
+          </div>
+          {hideFromTOC && (
               <div className="m-0 my-auto mx-4 pl-3">
                 <span className="small d-flex">
                   <Icon className="mr-2" src={Block} data-testid="hide-from-toc-sequence-link-icon" />
@@ -129,7 +130,6 @@ const SequenceLink = ({
                 {due ? dueDateMessage : noDueDateMessage}
               </small>
             </div>
-          </div>
         </div>
       </div>
     </li>
