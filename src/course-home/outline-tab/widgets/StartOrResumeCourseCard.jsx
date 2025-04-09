@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { sendTrackingLogEvent } from "@edx/frontend-platform/analytics";
 import messages from "../messages";
 import { useModel } from "../../../generic/model-store";
-import { PlayCircleOutline } from '@openedx/paragon/icons';
+import { PlayCircle } from '@openedx/paragon/icons';
 
 const StartOrResumeCourseCard = ({ intl }) => {
   const { courseId } = useSelector((state) => state.courseHome);
@@ -36,25 +36,19 @@ const StartOrResumeCourseCard = ({ intl }) => {
     <Card
       className="mb-3 raised-card"
       data-testid="start-resume-card"
-      style={{ backgroundColor: "#183749", color: "#FFFFFF" }}
+      style={{ backgroundColor: "#183749", color: "#FFFFFF", height: "130px", display: "grid" }}
     >
       <Card.Body className="d-flex align-items-center gap-3">
         {/* Circle with play icon */}
         <div
           className="d-flex align-items-center justify-content-center"
-          style={{
-            width: 60,
-            height: 60,
-            borderRadius: "50%",
-            backgroundColor: "#F0F6F7",
-          }}
         >
-          <PlayCircleOutline size="md" className="text-brand" />
+          <PlayCircle size="md" className="text-brand" />
         </div>
 
         {/* Text and button column */}
         <div className="flex-grow-1">
-          <div className="fw-bold mb-1" style={{ fontSize: "1.1rem", color: "#fff" }}>
+          <div className="fw-bold mb-1" style={{ fontSize: "1.6rem", color: "#fff" }}>
             {
             hasVisitedCourse
               ? intl.formatMessage(messages.resumeBlurb)

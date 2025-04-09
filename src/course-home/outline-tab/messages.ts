@@ -132,7 +132,7 @@ const messages = defineMessages({
   },
   resume: {
     id: 'learning.outline.resume',
-    defaultMessage: 'Resume course',
+    defaultMessage: 'RESUME COURSE',
     description: 'Anchor text for button that would resume course',
   },
   setGoal: {
@@ -162,7 +162,7 @@ const messages = defineMessages({
   },
   start: {
     id: 'learning.outline.start',
-    defaultMessage: 'Start course',
+    defaultMessage: 'START COURSE',
     description: 'The text for button which starts the course',
   },
   startBlurb: {
