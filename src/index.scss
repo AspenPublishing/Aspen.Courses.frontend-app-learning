@@ -87,6 +87,7 @@
 }
 
 .notification-btn {
+  display: none !important;
   @media (max-width: -1 + map-get($grid-breakpoints, "sm")) {
     height: 3rem;
   }
