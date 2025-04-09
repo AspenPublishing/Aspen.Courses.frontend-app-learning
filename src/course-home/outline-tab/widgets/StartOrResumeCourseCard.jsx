@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { sendTrackingLogEvent } from "@edx/frontend-platform/analytics";
 import messages from "../messages";
 import { useModel } from "../../../generic/model-store";
+import { PlayCircleOutline } from '@openedx/paragon/icons';
 
 const StartOrResumeCourseCard = ({ intl }) => {
   const { courseId } = useSelector((state) => state.courseHome);
@@ -48,16 +49,20 @@ const StartOrResumeCourseCard = ({ intl }) => {
             backgroundColor: "#F0F6F7",
           }}
         >
-          <Icon src="fa-play" size="md" className="text-brand" />
+          <PlayCircleOutline size="md" className="text-brand" />
         </div>
 
         {/* Text and button column */}
         <div className="flex-grow-1">
-          <div className="fw-bold mb-1" style={{ fontSize: "1.1rem" }}>
-            {intl.formatMessage(messages.pickUpWhereYouLeftOff)}
+          <div className="fw-bold mb-1" style={{ fontSize: "1.1rem", color: "#fff" }}>
+            {
+            hasVisitedCourse
+              ? intl.formatMessage(messages.resumeBlurb)
+              : intl.formatMessage(messages.startBlurb)
+          }
           </div>
           <Button
-            variant="brand"
+            variant="inverse-brand"
             href={resumeCourseUrl}
             onClick={logResumeCourseClick}
             className="mt-1"
