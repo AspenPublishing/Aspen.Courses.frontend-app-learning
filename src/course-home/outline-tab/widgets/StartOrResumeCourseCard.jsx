@@ -40,31 +40,33 @@ const StartOrResumeCourseCard = ({ intl }) => {
       style={{ backgroundColor: "#183749" }}
     >
       <Card.Header
-        style={{ margin: "1rem !important" }}
+        style={{ margin: "1rem !important", color: "#fff !important" }}
         title={
           hasVisitedCourse
             ? intl.formatMessage(messages.resumeBlurb)
             : intl.formatMessage(messages.startBlurb)
         }
       >
-        <svg
-          width="90"
-          height="91"
-          viewBox="0 0 90 91"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="45" cy="45.7837" r="45" fill="#F0F6F7" />
-        </svg>
-        <Button
-            variant="brand"
-            block
-            href={resumeCourseUrl}
-            onClick={() => logResumeCourseClick()}
-          >
-            {hasVisitedCourse ? intl.formatMessage(messages.resume) : intl.formatMessage(messages.start)}
-          </Button>
       </Card.Header>
+      <Card.Body>
+        <svg
+            width="90"
+            height="91"
+            viewBox="0 0 90 91"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="45" cy="45.7837" r="45" fill="#F0F6F7" />
+          </svg>
+          <Button
+              variant="brand"
+              block
+              href={resumeCourseUrl}
+              onClick={() => logResumeCourseClick()}
+            >
+              {hasVisitedCourse ? intl.formatMessage(messages.resume) : intl.formatMessage(messages.start)}
+            </Button>
+      </Card.Body>
       {/* Footer is needed for internal vertical spacing to work out. If you can remove, be my guest */}
       {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
     </Card>
