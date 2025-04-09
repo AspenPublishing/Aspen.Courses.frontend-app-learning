@@ -71,7 +71,7 @@ const LoadedTabPage = ({
         streakDiscountCouponEnabled={streakDiscountCouponEnabled}
         verifiedMode={verifiedMode}
       />
-      <main className="d-flex flex-column flex-grow-1">
+      <main className="d-flex flex-column flex-grow-1" style={{ background: "#F0F6F7" }}>
         <AlertList
           topic="outline"
           className="mx-5 mt-3"
