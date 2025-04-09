@@ -1,7 +1,6 @@
 import React from "react";
-import { Button, Card } from "@openedx/paragon";
+import { Button, Card, Icon } from "@openedx/paragon";
 import { injectIntl, intlShape } from "@edx/frontend-platform/i18n";
-
 import { useSelector } from "react-redux";
 import { sendTrackingLogEvent } from "@edx/frontend-platform/analytics";
 import messages from "../messages";
@@ -9,7 +8,6 @@ import { useModel } from "../../../generic/model-store";
 
 const StartOrResumeCourseCard = ({ intl }) => {
   const { courseId } = useSelector((state) => state.courseHome);
-
   const { org } = useModel("courseHomeMeta", courseId);
 
   const eventProperties = {
@@ -37,38 +35,39 @@ const StartOrResumeCourseCard = ({ intl }) => {
     <Card
       className="mb-3 raised-card"
       data-testid="start-resume-card"
-      style={{ backgroundColor: "#183749" }}
+      style={{ backgroundColor: "#183749", color: "#FFFFFF" }}
     >
-      <Card.Header
-        style={{ margin: "1rem !important", color: "#fff !important" }}
-        title={
-          hasVisitedCourse
-            ? intl.formatMessage(messages.resumeBlurb)
-            : intl.formatMessage(messages.startBlurb)
-        }
-      >
-      </Card.Header>
-      <Card.Body>
-        <svg
-            width="90"
-            height="91"
-            viewBox="0 0 90 91"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="45" cy="45.7837" r="45" fill="#F0F6F7" />
-          </svg>
+      <Card.Body className="d-flex align-items-center gap-3">
+        {/* Circle with play icon */}
+        <div
+          className="d-flex align-items-center justify-content-center"
+          style={{
+            width: 60,
+            height: 60,
+            borderRadius: "50%",
+            backgroundColor: "#F0F6F7",
+          }}
+        >
+          <Icon src="fa-play" size="md" className="text-brand" />
+        </div>
+
+        {/* Text and button column */}
+        <div className="flex-grow-1">
+          <div className="fw-bold mb-1" style={{ fontSize: "1.1rem" }}>
+            {intl.formatMessage(messages.pickUpWhereYouLeftOff)}
+          </div>
           <Button
-              variant="brand"
-              block
-              href={resumeCourseUrl}
-              onClick={() => logResumeCourseClick()}
-            >
-              {hasVisitedCourse ? intl.formatMessage(messages.resume) : intl.formatMessage(messages.start)}
-            </Button>
+            variant="brand"
+            href={resumeCourseUrl}
+            onClick={logResumeCourseClick}
+            className="mt-1"
+          >
+            {hasVisitedCourse
+              ? intl.formatMessage(messages.resume)
+              : intl.formatMessage(messages.start)}
+          </Button>
+        </div>
       </Card.Body>
-      {/* Footer is needed for internal vertical spacing to work out. If you can remove, be my guest */}
-      {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
     </Card>
   );
 };
