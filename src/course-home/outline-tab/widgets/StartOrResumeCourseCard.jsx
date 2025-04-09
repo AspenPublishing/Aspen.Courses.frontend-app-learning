@@ -44,7 +44,7 @@ const StartOrResumeCourseCard = ({ intl }) => {
           className="d-flex align-items-center justify-content-center"
           style={{ width: "10%"}}
         >
-          <PlayCircle size="lg" className="text-brand" />
+          <Icon src={PlayCircle} size="lg" className="text-white" style={{ height: '80px', width: '80px' }}/>
         </div>
 
         {/* Text and button column */}
@@ -60,7 +60,7 @@ const StartOrResumeCourseCard = ({ intl }) => {
             variant="inverse-brand"
             href={resumeCourseUrl}
             onClick={logResumeCourseClick}
-            className="mt-1 px-4 py-2"
+            className="mt-1 px-5 py-2"
           >
             {hasVisitedCourse
               ? intl.formatMessage(messages.resume)
